@@ -1,0 +1,358 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+
+
+/*body {
+    font-family: 'Roboto', sans-serif;
+}*/
+
+.MenuPage {
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+}
+
+.menu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #b8ffc8;
+    font-family: 'Roboto', sans-serif;
+   
+}
+
+
+
+    .menu .menuTitle {
+        font-family: cursive;
+        font-size: 60px;
+    }
+
+.menuList {
+    width: 70vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+
+/* MENU ITEM STYLING */
+
+.menuItem {
+    position: relative; /* 新增 */
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ebfff4;
+
+
+}
+
+
+    .menuItem:hover {
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in;
+        cursor: pointer;
+    }
+
+    .menuItem div {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        width: 100%;
+        height: 200px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .menuItem h1 {
+        margin-left: 20px;
+        font-weight: 600;
+        text-align: left;
+        /*調整超出頁面的字*/
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 250px; /* 根据需要调整最大宽度值 */
+    }
+    .menuItem p {
+        margin-left: 20px;
+        /*調整超出頁面的字*/
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 200px; /* 根据需要调整最大宽度值 */
+    }
+
+.cardButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* 新增 */
+    justify-content: center; /* 新增 */
+    align-items: center; /* 新增 */
+}
+
+    .cardButton span {
+        display: none; /* 新增：隱藏文字內容 */
+    }
+
+
+@media only screen and (max-width: 1300px) {
+    .MenuPage {
+        
+        font-size: 200%;
+    }
+
+    .menu {
+        background-size: contain;
+    }
+
+    .menuList {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .MenuPage {
+        
+        font-size: 150%;
+    }
+    .menu {
+        background-size: contain;
+    }
+    .menuList {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*BigMenuItem STYLE*/
+
+.BigMenuItem {
+    /*font-family: 'Roboto', sans-serif;*/
+    border-radius: 15px;
+    width: 800px;
+    height: 700px;
+    margin: 20px;
+    box-shadow: 60px 60px 60px rgba(0, 0, 0, 0.2);
+    background-color: floralwhite;
+    animation: scaleIn 0.3s ease-in-out; /* 設定動畫效果 */
+    
+    /*overflow-x: scroll;*/ /* 添加水平滑动 */
+    /*overflow-y: scroll;*/ /* 添加垂直滑动 */
+    /*   display: flex;
+    flex-direction: column;
+    justify-content: space-between;*/
+}
+
+
+    .BigMenuItem div {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    .BigMenuItem h1 {
+        font-weight: 900;
+        text-align: justify;
+        margin-left: 20px;
+    }
+    .BigMenuItem p {
+        text-align: justify;
+        margin-left: 20px;
+    }
+
+
+
+    .BigMenuItem.hidden {
+        display: none;
+        
+    }
+
+/*body {
+    position: relative;
+    height: 100vh;
+}*/
+
+.bigCardList {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    
+    /* 其他樣式設定 */
+}
+    .bigCardList h1 {
+        text-align: center;
+    }
+
+    .bigCardList p {
+        text-align: justify;
+        margin: 0 auto;
+        width: 600px;
+        font-weight: 600;
+    }
+
+
+
+    @keyframes scaleIn {
+        0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.BigMenuItem .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+.rightbtton {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    opacity: 80%;
+}
+.leftbtton {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity:80%;
+}
+
+    .rightbtton:hover,
+    .leftbtton:hover {
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+    }
+
+.bi-arrow-right-circle {
+    right: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 80%;
+    color: dimgrey;
+}
+
+.bi-arrow-left-circle {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    opacity: 80%;
+    color:dimgrey;
+}
+
+@media only screen and (max-width: 1300px) {
+    .BigMenuItem {
+        width: 600px;
+        height: 500px;
+        overflow: auto;
+    }
+
+        
+
+        .BigMenuItem p {
+           
+            margin-left: 14px;
+        }
+}
+
+@media only screen and (max-width: 800px) {
+    .BigMenuItem {
+        overflow: auto;
+        width: 400px;
+        height: 350px;
+        background-size: contain;
+    }
+        .BigMenuItem .backgroundImage {
+            width: 100%;
+
+        }
+
+        
+
+        .BigMenuItem p {
+            text-align: justify;
+            margin-left: 12px;
+        }
+    
+}
+
+    /*.bigCardList::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);*/ /* 調整透明度值 */
+        /*z-index: -1;*/ /* 確保背景層位於大卡片內部 */
+    /*}*/
+
+/*    .BigMenuItem:hover {
+        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+        transition: 0.3s ease-in;
+        cursor: pointer;
+    }*/
+
+/*
+@media only screen and (max-width: 1300px) {
+    .BigMenuItem {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .BigMenuItem {
+        grid-template-columns: 1fr;
+    }
+}*/
+
+
